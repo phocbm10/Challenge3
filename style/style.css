@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800;900&family=Roboto&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+li,
+ul {
+  list-style: none;
+}
+img {
+  cursor: pointer;
+  max-width: 100%;
+  max-height: 100%;
+}
+.container {
+  width: 90%;
+  margin: auto;
+}
+.dflex {
+  display: flex;
+}
+
+/* Header */
+.header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.navigation {
+  width: 100%;
+  height: 70px;
+  background-color: #111111;
+  position: fixed;
+  z-index: 9999;
+}
+.nav {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.nav .logo a{
+  font-size:2.5rem;
+}
+.nav a {
+  color: #fff;
+  font-size:1rem;
+}
+.nav ul {
+  display: flex;
+}
+.nav > ul > li {
+  padding: 1.1rem;
+}
+.nav .nav__list > li > a {
+  font-size: 1.3rem;
+}
+.nav .nav__list > li > a:hover {
+  color: #e61616;
+}
+
+.navigation .nav > ul > li > ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #161616;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+}
+.nav > ul > li > ul > li {
+  width: 25%;
+  padding: 10px 0 10px 5px;
+}
+.nav > ul > li > ul > li i {
+  font-size: 0.7rem;
+  color: #fff;
+}
+.nav > ul > li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+}
+.nav > ul > li > ul > li:hover > a {
+  color: #e61616;
+}
+
+.navigation .nav .search {
+  background-color: #f2f2f2;
+  width: 240px;
+  height: 40px;
+  display: flex;
+  border-radius: 5px;
+}
+.navigation .nav .search input {
+  padding: 6px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 200px;
+  height: 100%;
+  color: #000;
+  padding: 0 10px;
+}
+.navigation .nav .search .icon {
+  width: 40px;
+  height: 100%;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #cccccc;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  transition: 0.4s;
+}
+.navigation .nav .search .icon:hover {
+  background-color: #e6e6e6;
+}
+.navigation .nav .search span i {
+  color: #222222;
+}
+#dls,
+#tl {
+  position: relative;
+}
+#dls::after,
+#tl::after {
+  position: absolute;
+  font-family: FontAwesome;
+  content: "\f078";
+  font-size: 0.8rem;
+  margin-left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+/* Header Banner */
+.header .banner__wr {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.header .banner__wr .wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.header .banner__wr .wrapper > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.header .banner__wr .wrapper > div {
+  position: absolute;
+  background: black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0.6;
+}
+.header .banner__wr .text {
+  position: absolute;
+  text-align: center;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  color: #fff;
+}
+.header .banner__wr .text h1 {
+  font-size: 3.5rem;
+  margin-top: -30px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+.header .banner__wr .text p {
+  margin-top: 30px;
+  font-size: 1.3rem;
+}
+.header .banner__wr .author {
+  position: absolute;
+  right: 2%;
+  bottom: 2%;
+  color: #fff;
+  font-size: 1.5rem;
+  z-index: 3;
+  font-style: italic;
+}
+
+/* Banner */
+.banner .banner__btn {
+  justify-content: space-between;
+}
+.banner__left {
+  width: 65%;
+}
+.banner .banner__btn .banner__left .news{
+  padding-top: 70px;
+}
+.banner__right {
+  width: 32%;
+}
+.banner__right .topView{
+  padding-top:70px;
+}
+.title {
+  padding: 10px 25px;
+  border-radius: 15px;
+  display: inline-block;
+}
+.title p {
+  font-size: 1.5rem;
+}
+.clo {
+  background-color: #1b1b1b;
+  color: #fff;
+}
+
+.content {
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.ngang {
+  width: 63%;
+  cursor: pointer;
+}
+.ngang img {
+  width: 100%;
+  height: auto;
+}
+
+.doc {
+  width: 35%;
+  flex-direction: column;
+}
+.doc .one:not(:first-child) {
+  margin-top: 15px;
+}
+.doc img {
+  width: 80px;
+  height: 80px;
+}
+.doc p {
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
+
+/* Banner Right */
+.banner__right .doc {
+  width: 100%;
+  margin-top: 20px;
+}
+.banner__right .doc img {
+  width: 100%;
+  height: auto;
+}
+.banner__right .doc p {
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+/* Banner Đầu Sách */
+.banner__right .dausach{
+  padding-top:70px;
+}
+.dausach .doc .one {
+  justify-content: space-between;
+  margin-top:30px;
+}
+.dausach .doc .one .image{
+  width:90px;
+  height:120px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  object-fit: cover;
+}
+.dausach .doc .one .one__text{
+  width:72%;
+  text-align: left;
+}
+.dausach .doc .one .one__text p{
+  margin:0;
+
+}
+
+/* Nhân vật tiêu biểu */
+.nv {
+  width: 100%;
+  padding-top:70px;
+}
+.nv .nv__btn {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.nv .nv__btn .one {
+  text-align: center;
+}
+.nv .nv__btn .image {
+  width: 250px;
+  height: 240px;
+  margin-top: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.nv .nv__btn .image img {
+}
+.nv .nv__btn .one p {
+  font-size: 1.2rem;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.nv .nv__btn .one i {
+  font-size: 0.9rem;
+}
+
+/* Di tích lịch sử */
+.ditich {
+  padding-top:70px;
+  padding-bottom:40px;
+}
+.ditich .ditich__btn {
+  width: 100%;
+  margin-top: 30px;
+}
+.ditich .ditich__btn .doc {
+  width: 100%;
+}
+.ditich .ditich__btn .doc .one {
+  width: 100%;
+  justify-content: space-between;
+}
+.ditich .ditich__btn .doc .one:not(:first-child){
+  margin-top:30px;
+}
+.ditich .ditich__btn .doc .one .image {
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  object-fit: cover;
+}
+.ditich .ditich__btn .doc .one p{
+  width:80%;
+  font-size:0.9rem;
+}
+
+/* Footer */
+.footer{
+  width:100%;
+  height:70px;
+  background-color:#DDDDDD;
+}
+.footer .footer__text{
+  height:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .footer__text {
+  font-size:1.2rem;
+  
+}
+.footer .footer__text p a{
+  color:#e61616;
+}
+
+.nd2{
+  width:40px;
+  height:40px;
+  position:fixed;
+  right:0;
+  top:40%;
+  background-color:#4AC0EA;
+  z-index:999999;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color:#111;
+}
